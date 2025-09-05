@@ -1,7 +1,8 @@
-staticSites:
-  - name: webos-static
-    buildCommand: npm ci && npm run build
-    publishPath: out
+services:
+  - type: static
+    name: webos-static
+    buildCommand: npm ci && npm run build   # runs next build && next export
+    staticPublishPath: out                  # serve the exported site
     pullRequestPreviewsEnabled: true
     envVars:
       - key: NODE_VERSION
