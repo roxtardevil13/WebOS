@@ -1,11 +1,12 @@
+# render.yaml
 services:
   - type: web
-    runtime: static            # <-- static site
+    runtime: static
     name: webos-static
-    buildCommand: npm ci && npm run build   # runs next build && next export
-    staticPublishPath: out                  # serve the exported site
+    buildCommand: npm ci && npm run build   # runs `next build` → writes to `out/`
+    staticPublishPath: out
     previews:
-      generation: automatic                 # PR previews (replaces pullRequestPreviewsEnabled)
+      generation: automatic
     envVars:
       - key: NODE_VERSION
-        value: 18
+        value: 22
