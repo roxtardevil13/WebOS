@@ -1,11 +1,6 @@
 services:
-  - type: web
-    name: webos-web
-    env: node
-    plan: free
+  - type: static
+    name: webos-static
     buildCommand: npm ci && npm run build
-    startCommand: npm run start
+    publishPath: out
     autoDeploy: true
-    envVars:
-      - key: NODE_VERSION
-        value: 18
