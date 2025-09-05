@@ -1,9 +1,11 @@
 services:
-  - type: static
+  - type: web
+    runtime: static            # <-- static site
     name: webos-static
     buildCommand: npm ci && npm run build   # runs next build && next export
     staticPublishPath: out                  # serve the exported site
-    pullRequestPreviewsEnabled: true
+    previews:
+      generation: automatic                 # PR previews (replaces pullRequestPreviewsEnabled)
     envVars:
       - key: NODE_VERSION
         value: 18
