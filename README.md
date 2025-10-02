@@ -2,6 +2,10 @@
 
 A tiny "web OS" with draggable windows, taskbar launcher, and offline support.
 
+## Run Live
+```bash
+https://webos-static-ddb5.onrender.com
+```
 ## Run
 ```bash
 npm install
